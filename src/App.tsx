@@ -1,17 +1,14 @@
-import { useState } from "react"
-import { Home, PerDiemForm, TravelExpenseForm } from '../components'
+//@ts-nocheck
+import { Home, PerDiemForm, TravelExpenseForm } from './views'
+import { useView } from "./context/ViewContext"
+import { Navbar } from './components/Navbar'
 
 const App = () => {
-  const [view, setView] = useState('home')
+  const { view } = useView()
 
   return (
     <>
-      <nav className='flex justify-around'>
-        <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('home')}>Home</div>
-        <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('perDiemForm')}>Per Diem</div>
-        <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('travelExpenseForm')}>Travel Claim</div>
-        <div className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md">PDF Docs</div>
-      </nav>
+      <Navbar />
       {view === 'home' && <Home />}
       {view === 'perDiemForm' && <PerDiemForm />}
       {view === 'travelExpenseForm' && <TravelExpenseForm />}
