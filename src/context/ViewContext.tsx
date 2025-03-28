@@ -20,6 +20,7 @@ const ViewProvider = ({ children }: { children: ReactNode }) => {
 
 const useView = () => {
     const context = useContext(ViewContext)
+    
     if (!context) {
         throw new Error('useView must be used within a ViewProvider')
     }

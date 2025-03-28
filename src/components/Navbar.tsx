@@ -2,7 +2,6 @@ import React from "react" // do not need this, get rid of later
 import { useView } from "../context/ViewContext"
 
 export const Navbar = () => {
-    //@ts-ignore
     const { setView } = useView()
 
     return (
