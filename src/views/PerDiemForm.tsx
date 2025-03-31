@@ -9,14 +9,21 @@ const PerDiemForm = () => {
       } = useForm();
     
       return (
-        <form className='flex' onSubmit={handleSubmit((data) => console.log(data))}>
-          <input {...register('firstName')} />
-          <input {...register('lastName', { required: true })} />
-          {errors.lastName && <p>Last name is required.</p>}
-          <input {...register('age', { pattern: /\d+/ })} />
-          {errors.age && <p>Please enter number for age.</p>}
-          <input type="submit" />
-        </form>
+        <>
+        <div className='mt-10'>
+          <div>hey</div>
+          <div>hey</div>
+          <div>hey</div>
+        </div>
+          <form className='flex flex-col w-1/2 mt-10' onSubmit={handleSubmit((data) => console.log(data))}>
+            <input className='border border-red-500' {...register('firstName')} />
+            <input className='border border-red-500' {...register('lastName', { required: true })} />
+            {errors.lastName && <p>Last name is required.</p>}
+            <input className='border border-red-500' {...register('age', { pattern: /\d+/ })} />
+            {errors.age && <p>Please enter number for age.</p>}
+            <input type="submit" />
+          </form>
+        </>
       );
 }
 

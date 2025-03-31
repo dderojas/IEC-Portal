@@ -5,7 +5,7 @@ export const Navbar = () => {
     const { setView } = useView()
 
     return (
-    <nav className='flex justify-around'>
+    <nav className='flex justify-around w-full'>
         <button className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('home')}>Home</button>
         <button className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('perDiemForm')}>Per Diem</button>
         <button className="w-12 h-12 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-md" onClick={() => setView('travelExpenseForm')}>Travel Claim</button>
