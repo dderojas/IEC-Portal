@@ -1,5 +1,4 @@
-//@ts-nocheck
-import { useState, useContext, createContext } from "react"
+import { useState, useContext, createContext, ReactNode } from "react"
 
 interface ViewContextType {
     view: string;

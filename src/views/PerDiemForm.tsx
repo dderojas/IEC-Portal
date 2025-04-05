@@ -10,11 +10,11 @@ const PerDiemForm = () => {
     
       return (
         <>
-        <div className='mt-10'>
-          <div>hey</div>
-          <div>hey</div>
-          <div>hey</div>
-        </div>
+          <div className='mt-10'>
+            <div>Per Diem</div>
+            <div>Per Diem</div>
+            <div>Per Diem</div>
+          </div>
           <form className='flex flex-col w-1/2 mt-10' onSubmit={handleSubmit((data) => console.log(data))}>
             <input className='border border-red-500' {...register('firstName')} />
             <input className='border border-red-500' {...register('lastName', { required: true })} />
